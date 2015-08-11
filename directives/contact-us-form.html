@@ -1,0 +1,16 @@
+<style>
+	input.ng-invalid.ng-dirty{
+		border: solid red 2px;
+	}
+</style>
+<div ng-controller="ContactFormController as formCtrl">
+	<form id="contactForm" ng-submit="user.$valid && submit(user)" role="form" novalidate>
+		<div>	
+		Name: <input type="text" class="form-control" ng-model="user.name" required/>
+		Email: <input type="email"  class="form-control" ng-model="user.email" required/> 
+		Comment: <textarea class="form-control" rows="15" ng-model="user.comment" required></textarea>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+		{{message}}
+</div>
